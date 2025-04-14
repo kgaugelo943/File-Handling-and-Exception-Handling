@@ -28,19 +28,15 @@ def read_file():
     try:
         with open(filename, 'r') as file:
             content = file.read()
-            print("\n📄 File Content:\n")
+            print("\n File Content:\n")
             print(content)
 
     except FileNotFoundError:
         print(f"\n Error: The file '{filename}' does not exist.")
     except PermissionError:
-        print(f"\n🔒 Error: You don’t have permission to read '{filename}'.")
+        print(f"\n Error: You don’t have permission to read '{filename}'.")
     except Exception as e:
         print(f"\n An unexpected error occurred: {e}")
 
 # Run the function
 read_file()
-
-    
-    
-
